@@ -1,0 +1,13 @@
+clear;
+clc;
+syms t;
+pt=[4 2];
+pt2=[6 7];
+MatricePunti=[pt;pt2];
+figure(1);
+plot(pt(1),pt(2),"*");
+hold on;
+plot(pt2(1),pt2(2),"*");
+hold on;
+[curva1,errore]=decasteljau(MatricePunti,t);
+fplot(curva1(1),curva1(2),[0,1]);
